@@ -47,6 +47,45 @@ a {
 	}
 }
 
+figure {
+	margin: 1.75em 0;
+
+	img {
+		@include border-radius(3px);
+
+		border: 1px solid #f0f0f0;
+		padding: 1%;
+		max-width: 98%;
+	}
+
+	figcaption {
+		color: #ccc;
+		font-style: italic;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 1.75em;
+}
+
+h2 {
+	font-size: 1.75em;
+}
+
+p {
+	& + p {
+		margin-top: 1.75em;
+	}
+}
+
+#contain {
+	margin: 4em auto;
+}
+
 
 /*
 	III. Header
@@ -55,12 +94,35 @@ a {
 #contain > header {
 	@include container;
 
+	border-bottom: 1px solid #e0e0e0;
+	padding: 0;
+	margin-bottom: 4em;
+
 	hgroup {
 		@include span-columns(6);
 	}
 
 	nav {
 		@include span-columns(6 omega);
+
+		ul {
+			margin-bottom: 1.9em;
+			float: right;
+
+			li {
+				a {
+					@include border-radius(3px);
+
+					background: $base;
+					color: #fff;
+					padding: 0.45em;
+
+					&:hover {
+						background: darken($base, 10%);
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -70,15 +132,55 @@ a {
 */
 
 #main {
-	article {
-		@include container;
+	&.home {
+		article {
+			@include container;
 
-		aside {
-			@include span-columns(3);
+			padding: 0;
+
+			& + article {
+				border-top: 1px solid #f0f0f0;
+				margin-top: 4em;
+				padding-top: 4em;
+			}
+
+			aside {
+				@include span-columns(3);
+
+				h2 {
+					margin-bottom: 1em;
+				}
+			}
+
+			section {
+				@include span-columns(9 omega);
+			}
+		}
+	}
+
+	&.information {
+		section#bio {
+			@include container;
+
+			aside {
+				@include span-columns(4 omega);
+			}
+
+			section {
+				@include span-columns(8);
+			}
 		}
 
-		section {
-			@include span-columns(9 omega);
+		section#other {
+			@include container;
+
+			section {
+				@include span-columns(4);
+
+				&.colophon {
+					@include omega;
+				}
+			}
 		}
 	}
 }
@@ -90,6 +192,10 @@ a {
 
 #contain > footer {
 	@include container;
+
+	border-top: 1px solid #e0e0e0;
+	margin-top: 6em;
+	padding: 2em 0;
 
 	aside {
 		@include span-columns(3);
