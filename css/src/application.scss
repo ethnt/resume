@@ -80,6 +80,10 @@ h3 {
 	font-size: 1.35em;
 }
 
+h4 {
+	font-size: 1.125em;
+}
+
 p {
 	& + p {
 		margin-top: 1.75em;
@@ -167,11 +171,27 @@ p {
 			@include container;
 
 			border-bottom: 1px solid #f0f0f0;
-			margin-bottom: 2em;
-			padding-bottom: 2em;
+			margin-bottom: 4em;
+			padding-bottom: 4em;
+
+			h3 {
+				margin-bottom: 1.2962962963em;
+			}
 
 			aside {
-				@include span-columns(4 omega);
+				@include span-columns(3 omega);
+
+				p + p {
+					margin-top: 0;
+				}
+
+				li + li {
+					margin-top: 1.75em;
+				}
+
+				time {
+					color: #ccc;
+				}
 			}
 
 			section {
@@ -185,6 +205,16 @@ p {
 
 		section#other {
 			@include container;
+
+			h3 {
+				margin-bottom: 1.2962962963em;
+			}
+
+			li {
+				& + li {
+					margin-top: 1em;
+				}
+			}
 
 			section {
 				@include span-columns(4);
