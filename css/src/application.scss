@@ -1,15 +1,20 @@
 /*
-	
+	Ethan Turkeltaub
 		file: css/application.css
 */
 
 @import "lib/base";
+
+$base: #f36666;
+$text: #333;
+
 
 /*
 	= Appendix
 		I. Media Queries
 		II.
 */
+
 
 /*
 	I. Media Queries
@@ -23,6 +28,74 @@
 
 }
 
+
 /*
-	II. 
+	II. Universal
 */
+
+body {
+	color: $text;
+	font: 14px/1.75em "franklin-gothic-urw", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: $base;
+	text-decoration: none;
+
+	&:hover {
+		color: darken($base, 10%);
+	}
+}
+
+
+/*
+	III. Header
+*/
+
+#contain > header {
+	@include container;
+
+	hgroup {
+		@include span-columns(6);
+	}
+
+	nav {
+		@include span-columns(6 omega);
+	}
+}
+
+
+/*
+	IV. Main
+*/
+
+#main {
+	article {
+		@include container;
+
+		aside {
+			@include span-columns(3);
+		}
+
+		section {
+			@include span-columns(9 omega);
+		}
+	}
+}
+
+
+/*
+	V. Footer
+*/
+
+#contain > footer {
+	@include container;
+
+	aside {
+		@include span-columns(3);
+	}
+
+	section {
+		@include span-columns(9 omega);
+	}
+}
