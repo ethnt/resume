@@ -136,12 +136,17 @@ h2 {
   font-size: 1.75em;
 }
 
-/* line 80, src/application.scss */
+/* line 79, src/application.scss */
+h3 {
+  font-size: 1.35em;
+}
+
+/* line 84, src/application.scss */
 p + p {
   margin-top: 1.75em;
 }
 
-/* line 85, src/application.scss */
+/* line 89, src/application.scss */
 #contain {
   margin: 4em auto;
 }
@@ -149,7 +154,7 @@ p + p {
 /*
 	III. Header
 */
-/* line 94, src/application.scss */
+/* line 98, src/application.scss */
 #contain > header {
   *zoom: 1;
   max-width: 53em;
@@ -168,14 +173,14 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 101, src/application.scss */
+/* line 105, src/application.scss */
 #contain > header hgroup {
   width: 49.057%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 105, src/application.scss */
+/* line 109, src/application.scss */
 #contain > header nav {
   width: 49.057%;
   float: right;
@@ -183,12 +188,12 @@ p + p {
   #margin-left: -1em;
   display: inline;
 }
-/* line 108, src/application.scss */
+/* line 112, src/application.scss */
 #contain > header nav ul {
   margin-bottom: 1.9em;
   float: right;
 }
-/* line 113, src/application.scss */
+/* line 117, src/application.scss */
 #contain > header nav ul li a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -199,7 +204,7 @@ p + p {
   color: #fff;
   padding: 0.45em;
 }
-/* line 120, src/application.scss */
+/* line 124, src/application.scss */
 #contain > header nav ul li a:hover {
   background: #ef3737;
 }
@@ -207,7 +212,7 @@ p + p {
 /*
 	IV. Main
 */
-/* line 136, src/application.scss */
+/* line 140, src/application.scss */
 #main.home article {
   *zoom: 1;
   max-width: 53em;
@@ -224,24 +229,24 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 141, src/application.scss */
+/* line 145, src/application.scss */
 #main.home article + article {
   border-top: 1px solid #f0f0f0;
   margin-top: 4em;
   padding-top: 4em;
 }
-/* line 147, src/application.scss */
+/* line 151, src/application.scss */
 #main.home article aside {
   width: 23.585%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 150, src/application.scss */
+/* line 154, src/application.scss */
 #main.home article aside h2 {
   margin-bottom: 1em;
 }
-/* line 155, src/application.scss */
+/* line 159, src/application.scss */
 #main.home article section {
   width: 74.528%;
   float: right;
@@ -249,7 +254,7 @@ p + p {
   #margin-left: -1em;
   display: inline;
 }
-/* line 162, src/application.scss */
+/* line 166, src/application.scss */
 #main.information section#bio {
   *zoom: 1;
   max-width: 53em;
@@ -258,6 +263,9 @@ p + p {
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
 }
 /* line 38, ../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #main.information section#bio:after {
@@ -265,7 +273,7 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 165, src/application.scss */
+/* line 173, src/application.scss */
 #main.information section#bio aside {
   width: 32.075%;
   float: right;
@@ -273,14 +281,18 @@ p + p {
   #margin-left: -1em;
   display: inline;
 }
-/* line 169, src/application.scss */
+/* line 177, src/application.scss */
 #main.information section#bio section {
   width: 66.038%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 174, src/application.scss */
+/* line 180, src/application.scss */
+#main.information section#bio section h2 {
+  margin-bottom: 1em;
+}
+/* line 186, src/application.scss */
 #main.information section#other {
   *zoom: 1;
   max-width: 53em;
@@ -296,14 +308,14 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 177, src/application.scss */
+/* line 189, src/application.scss */
 #main.information section#other section {
   width: 32.075%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 180, src/application.scss */
+/* line 192, src/application.scss */
 #main.information section#other section.colophon {
   float: right;
   margin-right: 0;
@@ -314,7 +326,7 @@ p + p {
 /*
 	V. Footer
 */
-/* line 193, src/application.scss */
+/* line 205, src/application.scss */
 #contain > footer {
   *zoom: 1;
   max-width: 53em;
@@ -333,14 +345,14 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 200, src/application.scss */
+/* line 212, src/application.scss */
 #contain > footer aside {
   width: 23.585%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 204, src/application.scss */
+/* line 216, src/application.scss */
 #contain > footer section {
   width: 74.528%;
   float: right;

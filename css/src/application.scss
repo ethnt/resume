@@ -76,6 +76,10 @@ h2 {
 	font-size: 1.75em;
 }
 
+h3 {
+	font-size: 1.35em;
+}
+
 p {
 	& + p {
 		margin-top: 1.75em;
@@ -162,12 +166,20 @@ p {
 		section#bio {
 			@include container;
 
+			border-bottom: 1px solid #f0f0f0;
+			margin-bottom: 2em;
+			padding-bottom: 2em;
+
 			aside {
 				@include span-columns(4 omega);
 			}
 
 			section {
 				@include span-columns(8);
+
+				h2 {
+					margin-bottom: 1em;
+				}
 			}
 		}
 
