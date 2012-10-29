@@ -1,15 +1,11 @@
 source :rubygems
 
-gem 'thor'
-gem 'libnotify'
-gem 'ruby_gntp'
+gem 'rake'
+gem 'sinatra-flash', :require => 'sinatra/flash'
 
-gem 'guard'
-gem 'guard-compass'
-gem 'guard-coffeescript'
+gem 'erubis', "~> 2.7.0"
 
 gem 'compass'
-gem 'susy'
+gem 'barista'
 
-gem 'coffee-script'
-gem 'uglifier'
+gem 'padrino', '0.10.7'
