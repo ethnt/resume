@@ -130,28 +130,32 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 1.75em;
 }
+/* line 74, src/application.scss */
+h1 a {
+  color: #333333;
+}
 
-/* line 75, src/application.scss */
+/* line 79, src/application.scss */
 h2 {
   font-size: 1.75em;
 }
 
-/* line 79, src/application.scss */
+/* line 83, src/application.scss */
 h3 {
   font-size: 1.35em;
 }
 
-/* line 83, src/application.scss */
+/* line 87, src/application.scss */
 h4 {
   font-size: 1.125em;
 }
 
-/* line 88, src/application.scss */
+/* line 92, src/application.scss */
 p + p {
   margin-top: 1.75em;
 }
 
-/* line 93, src/application.scss */
+/* line 97, src/application.scss */
 #contain {
   margin: 4em auto;
 }
@@ -159,7 +163,7 @@ p + p {
 /*
 	III. Header
 */
-/* line 102, src/application.scss */
+/* line 106, src/application.scss */
 #contain > header {
   *zoom: 1;
   max-width: 53em;
@@ -169,7 +173,7 @@ p + p {
   padding-left: 1em;
   padding-right: 1em;
   border-bottom: 1px solid #e0e0e0;
-  padding: 0;
+  padding-bottom: 2em;
   margin-bottom: 4em;
 }
 /* line 38, ../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -178,14 +182,14 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 109, src/application.scss */
+/* line 113, src/application.scss */
 #contain > header hgroup {
   width: 49.057%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 113, src/application.scss */
+/* line 117, src/application.scss */
 #contain > header nav {
   width: 49.057%;
   float: right;
@@ -193,12 +197,11 @@ p + p {
   #margin-left: -1em;
   display: inline;
 }
-/* line 116, src/application.scss */
+/* line 120, src/application.scss */
 #contain > header nav ul {
-  margin-bottom: 1.9em;
   float: right;
 }
-/* line 121, src/application.scss */
+/* line 124, src/application.scss */
 #contain > header nav ul li a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -208,8 +211,9 @@ p + p {
   background: #f36666;
   color: #fff;
   padding: 0.45em;
+  vertical-align: middle;
 }
-/* line 128, src/application.scss */
+/* line 132, src/application.scss */
 #contain > header nav ul li a:hover {
   background: #ef3737;
 }
@@ -217,7 +221,7 @@ p + p {
 /*
 	IV. Main
 */
-/* line 144, src/application.scss */
+/* line 148, src/application.scss */
 #main.home article {
   *zoom: 1;
   max-width: 53em;
@@ -226,7 +230,6 @@ p + p {
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
-  padding: 0;
 }
 /* line 38, ../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #main.home article:after {
@@ -234,24 +237,24 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 149, src/application.scss */
+/* line 151, src/application.scss */
 #main.home article + article {
   border-top: 1px solid #f0f0f0;
   margin-top: 4em;
   padding-top: 4em;
 }
-/* line 155, src/application.scss */
+/* line 157, src/application.scss */
 #main.home article aside {
   width: 23.585%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 158, src/application.scss */
+/* line 160, src/application.scss */
 #main.home article aside h2 {
   margin-bottom: 1em;
 }
-/* line 163, src/application.scss */
+/* line 165, src/application.scss */
 #main.home article section {
   width: 74.528%;
   float: right;
@@ -259,7 +262,7 @@ p + p {
   #margin-left: -1em;
   display: inline;
 }
-/* line 170, src/application.scss */
+/* line 172, src/application.scss */
 #main.information section#bio {
   *zoom: 1;
   max-width: 53em;
@@ -278,11 +281,11 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 177, src/application.scss */
+/* line 179, src/application.scss */
 #main.information section#bio h3 {
   margin-bottom: 1.2962962963em;
 }
-/* line 181, src/application.scss */
+/* line 183, src/application.scss */
 #main.information section#bio aside {
   width: 23.585%;
   float: right;
@@ -290,30 +293,30 @@ p + p {
   #margin-left: -1em;
   display: inline;
 }
-/* line 184, src/application.scss */
+/* line 186, src/application.scss */
 #main.information section#bio aside p + p {
   margin-top: 0;
 }
-/* line 188, src/application.scss */
+/* line 190, src/application.scss */
 #main.information section#bio aside li + li {
   margin-top: 1.75em;
 }
-/* line 192, src/application.scss */
+/* line 194, src/application.scss */
 #main.information section#bio aside time {
   color: #ccc;
 }
-/* line 197, src/application.scss */
+/* line 199, src/application.scss */
 #main.information section#bio section {
   width: 66.038%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 200, src/application.scss */
+/* line 202, src/application.scss */
 #main.information section#bio section h2 {
   margin-bottom: 1em;
 }
-/* line 206, src/application.scss */
+/* line 208, src/application.scss */
 #main.information section#other {
   *zoom: 1;
   max-width: 53em;
@@ -329,22 +332,22 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 209, src/application.scss */
+/* line 211, src/application.scss */
 #main.information section#other h3 {
   margin-bottom: 1.2962962963em;
 }
-/* line 214, src/application.scss */
+/* line 216, src/application.scss */
 #main.information section#other li + li {
   margin-top: 1em;
 }
-/* line 219, src/application.scss */
+/* line 221, src/application.scss */
 #main.information section#other section {
   width: 32.075%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 222, src/application.scss */
+/* line 224, src/application.scss */
 #main.information section#other section.colophon {
   float: right;
   margin-right: 0;
@@ -355,7 +358,7 @@ p + p {
 /*
 	V. Footer
 */
-/* line 235, src/application.scss */
+/* line 237, src/application.scss */
 #contain > footer {
   *zoom: 1;
   max-width: 53em;
@@ -366,7 +369,7 @@ p + p {
   padding-right: 1em;
   border-top: 1px solid #e0e0e0;
   margin-top: 6em;
-  padding: 2em 0;
+  padding-top: 2em;
 }
 /* line 38, ../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #contain > footer:after {
@@ -374,18 +377,26 @@ p + p {
   display: table;
   clear: both;
 }
-/* line 242, src/application.scss */
+/* line 244, src/application.scss */
 #contain > footer aside {
   width: 23.585%;
   float: left;
   margin-right: 1.887%;
   display: inline;
 }
-/* line 246, src/application.scss */
+/* line 248, src/application.scss */
 #contain > footer section {
   width: 74.528%;
   float: right;
   margin-right: 0;
   #margin-left: -1em;
   display: inline;
+}
+
+/*
+	VI. Miscellaneous
+*/
+/* line 258, src/application.scss */
+.gist-meta {
+  display: none;
 }

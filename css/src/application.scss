@@ -70,6 +70,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 1.75em;
+
+	a {
+		color: $text;
+	}
 }
 
 h2 {
@@ -103,7 +107,7 @@ p {
 	@include container;
 
 	border-bottom: 1px solid #e0e0e0;
-	padding: 0;
+	padding-bottom: 2em;
 	margin-bottom: 4em;
 
 	hgroup {
@@ -114,7 +118,6 @@ p {
 		@include span-columns(6 omega);
 
 		ul {
-			margin-bottom: 1.9em;
 			float: right;
 
 			li {
@@ -124,6 +127,7 @@ p {
 					background: $base;
 					color: #fff;
 					padding: 0.45em;
+					vertical-align: middle;
 
 					&:hover {
 						background: darken($base, 10%);
@@ -143,8 +147,6 @@ p {
 	&.home {
 		article {
 			@include container;
-
-			padding: 0;
 
 			& + article {
 				border-top: 1px solid #f0f0f0;
@@ -237,7 +239,7 @@ p {
 
 	border-top: 1px solid #e0e0e0;
 	margin-top: 6em;
-	padding: 2em 0;
+	padding-top: 2em;
 
 	aside {
 		@include span-columns(3);
@@ -246,4 +248,13 @@ p {
 	section {
 		@include span-columns(9 omega);
 	}
+}
+
+
+/*
+	VI. Miscellaneous
+*/
+
+.gist-meta {
+	display: none;
 }
