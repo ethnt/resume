@@ -1,43 +1,260 @@
-// This import applies a global reset to any page that imports this stylesheet.
-@import "blueprint/reset";
+/*
+	Ethan Turkeltaub
+		file: css/application.css
+*/
 
-// To configure blueprint, edit the partials/base.sass file.
-@import "partials/base";
+@import "lib/base";
 
-// Import all the default blueprint modules so that we can access their mixins.
-@import "blueprint";
+$base: #f36666;
+$text: #333;
 
-// Import the non-default scaffolding module.
-@import "blueprint/scaffolding";
 
-// To generate css equivalent to the blueprint css but with your
-// configuration applied, uncomment:
-// @include blueprint
+/*
+	= Appendix
+		I. Media Queries
+		II.
+*/
 
-// But Compass recommends that you scope your blueprint styles
-// So that you can better control what pages use blueprint
-// when stylesheets are concatenated together.
-@include blueprint-scaffolding("body.bp");
 
-body.bp {
-  @include blueprint-typography(true);
-  @include blueprint-utilities;
-  @include blueprint-debug;
-  @include blueprint-interaction;
-  // Remove the scaffolding when you're ready to start doing visual design.
-  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+/*
+	I. Media Queries
+*/
+
+@media handheld, only screen and (max-width: 767px) { /* Handheld devices. */
+
 }
 
-form.bp {
-  @include blueprint-form;
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { /* iPhone 4 */
+
 }
 
-.two-col {
-  @include container;
-  background-color: #cccccc;
-  #header, #footer {
-    @include column(24); }
-  #sidebar {
-    @include column(3); }
-  #content {
-    @include column(21, true); } }
+
+/*
+	II. Universal
+*/
+
+body {
+	color: $text;
+	font: 14px/1.75em "franklin-gothic-urw", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: $base;
+	text-decoration: none;
+
+	&:hover {
+		color: darken($base, 10%);
+	}
+}
+
+figure {
+	margin: 1.75em 0;
+
+	img {
+		@include border-radius(3px);
+
+		border: 1px solid #f0f0f0;
+		padding: 1%;
+		max-width: 98%;
+	}
+
+	figcaption {
+		color: #ccc;
+		font-style: italic;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 1.75em;
+
+	a {
+		color: $text;
+	}
+}
+
+h2 {
+	font-size: 1.75em;
+}
+
+h3 {
+	font-size: 1.35em;
+}
+
+h4 {
+	font-size: 1.125em;
+}
+
+p {
+	& + p {
+		margin-top: 1.75em;
+	}
+}
+
+#contain {
+	margin: 4em auto;
+}
+
+
+/*
+	III. Header
+*/
+
+#contain > header {
+	@include container;
+
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 2em;
+	margin-bottom: 4em;
+
+	hgroup {
+		@include span-columns(6);
+	}
+
+	nav {
+		@include span-columns(6 omega);
+
+		ul {
+			float: right;
+
+			li {
+				a {
+					@include border-radius(3px);
+
+					background: $base;
+					color: #fff;
+					padding: 0.45em;
+					vertical-align: middle;
+
+					&:hover {
+						background: darken($base, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*
+	IV. Main
+*/
+
+#main {
+	&.home {
+		article {
+			@include container;
+
+			& + article {
+				border-top: 1px solid #f0f0f0;
+				margin-top: 4em;
+				padding-top: 4em;
+			}
+
+			aside {
+				@include span-columns(3);
+
+				h2 {
+					margin-bottom: 1em;
+				}
+			}
+
+			section {
+				@include span-columns(9 omega);
+			}
+		}
+	}
+
+	&.information {
+		section#bio {
+			@include container;
+
+			border-bottom: 1px solid #f0f0f0;
+			margin-bottom: 4em;
+			padding-bottom: 4em;
+
+			h3 {
+				margin-bottom: 1.2962962963em;
+			}
+
+			aside {
+				@include span-columns(3 omega);
+
+				p + p {
+					margin-top: 0;
+				}
+
+				li + li {
+					margin-top: 1.75em;
+				}
+
+				time {
+					color: #ccc;
+				}
+			}
+
+			section {
+				@include span-columns(8);
+
+				h2 {
+					margin-bottom: 1em;
+				}
+			}
+		}
+
+		section#other {
+			@include container;
+
+			h3 {
+				margin-bottom: 1.2962962963em;
+			}
+
+			li {
+				& + li {
+					margin-top: 1em;
+				}
+			}
+
+			section {
+				@include span-columns(4);
+
+				&.colophon {
+					@include omega;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+	V. Footer
+*/
+
+#contain > footer {
+	@include container;
+
+	border-top: 1px solid #e0e0e0;
+	margin-top: 6em;
+	padding-top: 2em;
+
+	aside {
+		@include span-columns(3);
+	}
+
+	section {
+		@include span-columns(9 omega);
+	}
+}
+
+
+/*
+	VI. Miscellaneous
+*/
+
+.gist-meta {
+	display: none;
+}
