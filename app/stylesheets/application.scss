@@ -21,7 +21,47 @@ $text: #333;
 */
 
 @media handheld, only screen and (max-width: 767px) { /* Handheld devices. */
+	.home {
+		aside, section {
+			width: 100% !important;
+		}
 
+		aside {
+			margin-bottom: 1em;
+
+			h2 {
+				margin-bottom: 0.35em !important;
+			}
+
+			li {
+				display: inline-block;
+
+				& + li {
+					&:before {
+						content: " — ";
+					}
+				}
+			}
+		}
+	}
+
+	.information {
+		section, aside {
+			float: left !important;
+			margin-right: 0 !important;
+			width: 100% !important;
+		}
+
+		aside {
+			margin-top: 1.75em;
+		}
+
+		section {
+			& + section {
+				margin-top: 1.75em;
+			}
+		}
+	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) { /* iPhone 4 */
