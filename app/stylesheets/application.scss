@@ -46,19 +46,29 @@ $text: #333;
 	}
 
 	.information {
+		@include clearfix;
+
 		section, aside {
+			@include clearfix;
+
 			float: left !important;
 			margin-right: 0 !important;
 			width: 100% !important;
 		}
 
 		aside {
-			margin-top: 1.75em;
+			margin-top: 3em;
 		}
 
 		section {
 			& + section {
 				margin-top: 1.75em;
+			}
+		}
+
+		.other {
+			section {
+				margin-bottom: 4em;
 			}
 		}
 	}
