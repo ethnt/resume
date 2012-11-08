@@ -1,0 +1,40 @@
+<!doctype html>
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}
+    %meta{:content => "The resume of student and web developer Ethan Turkeltaub.", :name => "description"}
+    %meta{:content => "Ethan Turkeltaub", :name => "author"}
+
+    %title Ethan Turkeltaub
+
+    %link{:href => "/humans.txt", :rel => "author", :type => "text/plain"}
+    %link{:href => "/css/application.css", :rel => "stylesheet"}
+
+    %script{:src => "//use.typekit.net/krf3ran.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+  %body
+    #contain
+      %header
+        %hgroup
+          %h1
+            %a{:href => url(:index)} Ethan Turkeltaub
+        %nav
+          %ul
+            %li
+              %a{:href => url(:information)} Information
+      = yield
+      %footer
+        %aside
+          %nav
+            %ul
+              %li
+                %a{:href => url(:index)} Home
+              %li
+                %a{:href => url(:information)} Information
+        %section
+          %p Ethan Turkeltaub is a student and web developer. The source for this site is <a href="http://github.com/eturk/resume">open-sourced on GitHub</a> and free to use, modify, and share.
+    :javascript
+      window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];

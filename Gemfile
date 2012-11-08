@@ -3,7 +3,8 @@ source :rubygems
 gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 
-gem 'erubis', "~> 2.7.0"
+gem 'haml'
+gem 'rdiscount'
 
 gem 'compass'
 gem 'susy'

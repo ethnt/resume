@@ -97,6 +97,22 @@ a {
 	}
 }
 
+blockquote {
+	border-left: 5px solid #efefef;
+	color: #787878;
+	margin: 1.75em 0;
+	padding-left: 1em;
+}
+
+code {
+	@include border-radius(2px);
+
+	background: ghostWhite;
+	border: 1px solid #ddd;
+	font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+	padding: 0 0.15em;
+}
+
 figure {
 	margin: 1.75em 0;
 
@@ -227,7 +243,7 @@ p {
 			padding-bottom: 4em;
 
 			h3 {
-				margin-bottom: 1.2962962963em;
+				margin-bottom: 1.3em;
 			}
 
 			aside {
@@ -259,7 +275,7 @@ p {
 			@include container;
 
 			h3 {
-				margin-bottom: 1.2962962963em;
+				margin-bottom: 1.3em;
 			}
 
 			li {
@@ -269,10 +285,19 @@ p {
 			}
 
 			section {
-				@include span-columns(4);
+				@include span-columns(5);
+				@include suffix(1);
+			}
+
+			aside {
+				&.networks {
+					@include span-columns(3);
+					@include suffix(1);
+				}
 
 				&.colophon {
-					@include omega;
+					@include span-columns(2 omega);
+					//@include omega;
 				}
 			}
 		}
